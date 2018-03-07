@@ -1,15 +1,18 @@
-<table>
-<tr>
-<td>
-<ul>
-{{#each model as |treenode|}}
-  <li>{{treenode.id}} - <button {{ action 'showDetail' treenode.id }}>Show Detail</button></li>
-{{/each}}
-</ul>
-</td>
-<td>
-{{treenode-panel}}
-</td>
-</tr>
-</table>
+<div class="container">
+  <div class="row">
+    <h1>Component Test</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <ul>
+      {{#each model as |treenode|}}
+        <li>{{treenode.id}} - <button {{ action 'showDetail' treenode.id }}>Show Detail</button></li>
+      {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-8">
+      {{treenode-panel}}
+    </div>
+  </div>
+</div>
 {{outlet}}
