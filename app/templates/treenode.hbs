@@ -1,1 +1,6 @@
+<ul>
+{{#each model as |treenode|}}
+  <li>{{treenode.id}} - <button {{ action 'showDetail' treenode.id }}>Show Detail</button></li>
+{{/each}}
+</ul>
 {{outlet}}
