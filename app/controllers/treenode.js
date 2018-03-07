@@ -2,7 +2,7 @@ import Ember from 'ember';
 const { computed } = Ember;
 export default Ember.Controller.extend({
 
-  lastSelectedHouse: -1,
+  lastSelectedHouse: "",
 
   lastSelectedHouseChanged: Ember.observer('lastSelectedHouse',function() {
     console.log('lastSelectedHouse changed (' + this.get('lastSelectedHouse') + ')')
